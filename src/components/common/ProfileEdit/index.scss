@@ -1,0 +1,27 @@
+.edit-btn{
+    position: absolute;
+    right: 20px;
+    font-family: system-ui;
+    font-size: 9px;
+    background-color: grey;
+    cursor: pointer;
+}
+
+.profile-edit-inputs {
+    display: grid;
+    margin-top: 35px;
+    gap: 20px;
+}
+
+.save-btn{
+    width: 20%;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 15px;
+    background-color: #0073b1;
+}
+
+.save-container{
+    display: flex;
+    justify-content: center;
+}
