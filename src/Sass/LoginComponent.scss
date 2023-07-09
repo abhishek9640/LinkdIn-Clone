@@ -1,0 +1,104 @@
+.login-wrapper {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.linkedinLogo {
+  width: 120px;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+}
+
+
+.login-wrapper-inner {
+  max-width: 400px;
+  width: 100%;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.sub-heading {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  // color: #212212;
+  
+}
+
+.common-input {
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  // background-color: white; 
+}
+
+.login-btn {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  font-size: 18px;
+  background-color: #0073b1;
+}
+
+.hr-text {
+  margin: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.hr-text:before,
+.hr-text:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.hr-text:before {
+  right: 0;
+  margin-right: 20px;
+}
+
+.hr-text:after {
+  left: 0;
+  margin-left: 20px;
+}
+
+.google-btn {
+  width: 100% !important;
+}
+
+::placeholder {
+  // color: white;
+  font-family: system-ui;
+  font-size: 16px;
+}
+
+
+.join-now {
+ color: #0073b1;
+ font-family: system-ui;
+ cursor: pointer;
+}
+
+.go-to-signup{
+  margin-left: 100px;
+}
