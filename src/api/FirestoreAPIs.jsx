@@ -1,5 +1,13 @@
 import { firestore } from "./firebaseConfig";
-import { addDoc, collection, onSnapshot, doc, updateDoc } from "firebase/firestore";
+import { 
+  addDoc, 
+  collection, 
+  onSnapshot, 
+  doc, 
+  updateDoc, 
+  query, 
+  where 
+} from "firebase/firestore";
 import { toast } from "react-toastify";
 
 let postsRef = collection(firestore, "posts");
@@ -21,6 +29,28 @@ export const getStatus = (setAllStatus) => {
       response.docs.map((doc) => {
         return { ...doc.data(), id: doc.id };
       })
+    );
+  });
+};
+
+export const getSingleStatus = (setAllStatus, id) => {
+  const singlePostQuery = query(postsRef, where("userID", "==", id));
+  onSnapshot(singlePostQuery, (response) => {
+    setAllStatus(
+      response.docs.map((docs) => {
+        return { ...docs.data(), id:docs.id};
+      })
+    );
+  });
+};
+
+export const getSingleUser = (setcurrentUser, email) => {
+  const singleUserQuery = query(userRef, where("email", "==", email));
+  onSnapshot(singleUserQuery, (response) => {
+    setcurrentUser(
+      response.docs.map((docs) => {
+        return { ...docs.data(), id: docs.id};
+      })[0]
     );
   });
 };

@@ -5,12 +5,13 @@ import "./index.scss";
 export default function ProfileEdit({ onEdit, currentUser }) {
     const[editInputs, setEditInputs] = useState({});
     const getinput = (event) => {
-        let { name, value} = event.target;
-        let input = { [name]: value };
+        let {name, value} = event.target;
+        let input = {[name]: value };
         setEditInputs({...editInputs, ...input });
     };
-    const updateProfileData = () => {
-        editProfile(currentUser?.userID, editInputs) ;
+    const updateProfileData = async () => {
+       await editProfile(currentUser?.userID, editInputs) ;
+       await onEdit();
     }
     return (
         <div className='profile-card'>
