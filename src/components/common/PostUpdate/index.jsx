@@ -20,6 +20,7 @@ export default function PostStatus( {currentUser }) {
             userEmail: currentUser.email,
             userName: currentUser.name,
             postID: getUniqeID(),
+            userID: currentUser.userID,
         };
         await postStatus(object);
         await setModalOpen(false);

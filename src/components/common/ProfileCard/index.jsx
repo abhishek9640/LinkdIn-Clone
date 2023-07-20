@@ -28,30 +28,31 @@ export default function ProfileCard({ currentUser, onEdit }) {
                 <div className='profile-info'>
                     <div>
                         <h3 className='userName'>
-                            {Object.values(currentProfile).length === 0 ? currentUser.name
+                            {Object.values(currentProfile).length === 0 
+                                ? currentUser.name
                                 : currentProfile?.name}
                         </h3>
                         <p className='heading-pc'>
                             {Object.values(currentProfile).length === 0
-                            ? currentUser.headline
-                            : currentProfile?.headline}
-                            </p>
+                                ? currentUser.headline
+                                : currentProfile?.headline}
+                        </p>
                         <p className='location'>
-                        {Object.values(currentProfile).length === 0
-                            ? currentUser.location
-                            : currentProfile?.location}
-                            </p>
+                            {Object.values(currentProfile).length === 0
+                                ? currentUser.location
+                                : currentProfile?.location}
+                        </p>
                     </div>
 
                     <div className='right-info'>
                         <p className='college'>
                             {Object.values(currentProfile).length === 0
-                            ? currentUser.college
-                            : currentProfile?.college}</p>
+                                ? currentUser.college
+                                : currentProfile?.college}</p>
                         <p className='company'>
                             {Object.values(currentProfile).length === 0
-                            ? currentUser.company
-                            : currentProfile?.company}</p>
+                                ? currentUser.company
+                                : currentProfile?.company}</p>
                     </div>
                 </div>
             </div>;

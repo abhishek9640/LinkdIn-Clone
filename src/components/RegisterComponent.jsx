@@ -6,6 +6,7 @@ import GoogleButton from 'react-google-button';
 import { useNavigate } from 'react-router-dom';
 import '../Sass/LoginComponent.scss';
 import { toast } from 'react-toastify';
+import { getUniqeID } from '../helpers/getUniqueid';
 
 export default function RegisterComponent() {
   let navigate = useNavigate();
@@ -15,7 +16,7 @@ export default function RegisterComponent() {
       let res = await RegisterAPI(credentials.email, credentials.password);
       toast.success("Account is now created");
       postUserData({ 
-        userID: getUniqueID(),
+        userID: getUniqeID(),
         name: credentials.name, 
         email: credentials.email});
       navigate('/home');
